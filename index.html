@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <article class="profile-card" data-testid="test-profile-card">
+            <div class="profile-card__content">
+                <div class="profile-card__image-container">
+                    <figure>
+                        <img src="Assest/Profile_Pics.jpg" alt="User profile picture" data-testid="test-user-avatar" class="profile-card__avatar">
+                    </figure>
+                    <div class="profile-card__time">
+                        <span>Current time (ms): </span>
+                        <span data-testid="test-user-time" id="current-time">0</span>
+                    </div>
+                </div>
+
+                <div class="profile-card__info">
+                    <header>
+                        <h1 data-testid="test-user-name">Emmanuel Udodirim</h1>
+                    </header>
+                    
+                    <p data-testid="test-user-bio">
+                        Frontend developer passionate about creating accessible and beautiful web experiences. 
+                        Always looking to learn new technologies and solve interesting problems.
+                    </p>
+                    
+                    <nav data-testid="test-user-social-links" class="profile-card__social">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/emmytronix" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    <span class="sr-only">GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/emmytronix" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/emmytronix" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    <span class="sr-only">LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="profile-card__lists">
+                        <section class="profile-card__section">
+                            <h2>Hobbies</h2>
+                            <ul data-testid="test-user-hobbies">
+                                <li>Coding</li>
+                                <li>Electrical Electronics</li>
+                                <li>Live sound mixing</li>
+                                <li>Reading</li>
+                            </ul>
+                        </section>
+                        
+                        <section class="profile-card__section">
+                            <h2>Dislikes</h2>
+                            <ul data-testid="test-user-dislikes">
+                                <li>Lack of Job opportunity</li>
+                                <li>Traffic jams</li>
+                                <li>Unnecessary meetings</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
