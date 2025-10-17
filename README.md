@@ -4,7 +4,7 @@ A responsive, accessible profile card component built with semantic HTML, CSS, a
 
 ## Live Demo
 
-[View Live Demo](https://your-deployment-url-here)
+[View Live Demo]https://emmytronix.github.io/Profile-Card/
 
 ## Features
 
