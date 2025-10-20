@@ -59,7 +59,7 @@ A responsive, accessible profile card component built with semantic HTML, CSS, a
 
 1. Clone this repository:
 ```
-git clone https://github.com/your-username/profile-card.git
+git clone https://github.com/emmytronix/Profile-Card.git
 ```
 
 2. Navigate to the project folder:
