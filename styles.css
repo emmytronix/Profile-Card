@@ -10,11 +10,9 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f5f7fa;
-    padding: 20px;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 /* Container */
@@ -22,15 +20,73 @@ body {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Profile Card */
+/* Main navigation */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    color: #2b6cb0;
+    background-color: #f7fafc;
+}
+
+.main-nav a.active {
+    color: #2b6cb0;
+    border-bottom: 2px solid #2b6cb0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 15px 0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Profile Card Styles (from Stage 0) */
 .profile-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 25px;
+    margin: 20px auto;
 }
 
 .profile-card__content {
@@ -143,6 +199,161 @@ body {
     color: #4a5568;
 }
 
+/* Contact Form Styles */
+.contact-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+}
+
+.contact-section h1 {
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.contact-section > p {
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e53e3e;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3182ce;
+}
+
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.success-message {
+    padding: 15px;
+    background-color: #48bb78;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+/* About Page Styles */
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.about-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    color: #4a5568;
+}
+
+.about-section ul {
+    list-style-position: inside;
+    margin: 0 0 15px 15px;
+    color: #4a5568;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+blockquote {
+    border-left: 4px solid #4299e1;
+    padding-left: 15px;
+    font-style: italic;
+    color: #4a5568;
+}
+
+blockquote footer {
+    text-align: right;
+    font-style: normal;
+    margin-top: 10px;
+    color: #718096;
+}
+
 /* Accessibility */
 .sr-only {
     position: absolute;
@@ -183,21 +394,33 @@ body {
 }
 
 @media (max-width: 480px) {
-    .profile-card {
+    .profile-card, .contact-section, .about-section {
         padding: 15px;
     }
     
-    .profile-card__avatar {
+    .profile-card__avatar, .about-avatar {
         width: 120px;
         height: 120px;
     }
     
-    .profile-card__info h1 {
+    .profile-card__info h1, .contact-section h1, .about-header h1 {
         font-size: 1.5rem;
     }
     
-    .profile-card__info p {
-        font-size: 0.95rem;
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav a {
+        padding: 10px;
+        border-bottom: none;
+        border-left: 2px solid transparent;
+    }
+    
+    .main-nav a.active {
+        border-bottom: none;
+        border-left: 2px solid #2b6cb0;
     }
 }
 
@@ -208,19 +431,26 @@ body {
         color: #e2e8f0;
     }
     
-    .profile-card {
+    .profile-card, .contact-section, .about-section, .site-header {
         background-color: #2d3748;
     }
     
-    .profile-card__info h1, .profile-card__section h2 {
+    .profile-card__info h1, .profile-card__section h2, 
+    .contact-section h1, .about-section h2 {
         color: #e2e8f0;
     }
     
-    .profile-card__info p, .profile-card__section li {
+    .profile-card__info p, .profile-card__section li,
+    .contact-section p, .about-section p, .about-section li {
         color: #cbd5e0;
     }
     
-    .profile-card__time, .profile-card__social a {
+    .profile-card__time {
+        background: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .profile-card__social a {
         background: #4a5568;
         color: #e2e8f0;
     }
@@ -228,5 +458,32 @@ body {
     .profile-card__social a:hover {
         background: #2d3748;
         color: #90cdf4;
+    }
+    
+    .form-group label {
+        color: #e2e8f0;
+    }
+    
+    .form-group input, .form-group textarea {
+        background-color: #4a5568;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .main-nav a {
+        color: #e2e8f0;
+    }
+    
+    .main-nav a:hover, .main-nav a.active {
+        color: #90cdf4;
+        background-color: #364154;
+    }
+    
+    .about-section {
+        border-color: #4a5568;
+    }
+    
+    .about-section h2 {
+        border-bottom-color: #4a5568;
     }
 }

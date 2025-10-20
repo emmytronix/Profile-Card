@@ -11,18 +11,26 @@ A responsive, accessible profile card component built with semantic HTML, CSS, a
 - Semantic HTML structure
 - Fully responsive design (mobile, tablet, desktop)
 - Accessible to keyboard users and screen readers
+- Form validation with accessible error messages
 - Dark mode support
 - Dynamic time display in milliseconds
 - Testable with data-testid attributes for automated testing
 
 ## Project Structure
 
-- `index.html` - Contains the semantic HTML structure
+### Pages
+- `index.html` - Profile Card (Stage 0)
+- `contact.html` - Contact Form with validation (Stage 1)
+- `about.html` - About Me reflective page (Stage 1)
+
+### Assets
 - `styles.css` - Responsive styling with modern CSS
-- `script.js` - JavaScript for dynamic functionality
+- `script.js` - JavaScript for profile card functionality
+- `contact.js` - JavaScript for form validation
 
 ## Requirements Met
 
+### Profile Card (Stage 0)
 - ✅ All required elements with proper data-testid attributes
 - ✅ Semantic HTML (article, figure, nav, section, headers)
 - ✅ Current time displayed in milliseconds using Date.now()
@@ -31,6 +39,21 @@ A responsive, accessible profile card component built with semantic HTML, CSS, a
 - ✅ Separate hobbies and dislikes lists
 - ✅ Keyboard navigation with visible focus styles
 - ✅ Responsive layout at various breakpoints
+
+### Contact Form (Stage 1)
+- ✅ Form with all required fields and proper data-testid attributes
+- ✅ Client-side validation with appropriate error messages
+- ✅ Accessible form with labels and aria-describedby for errors
+- ✅ Success message only shown after valid submission
+- ✅ Fully keyboard accessible
+- ✅ Responsive design
+
+### About Me Page (Stage 1)
+- ✅ All required sections with proper data-testid attributes
+- ✅ Semantic structure with main, section, headings
+- ✅ Reflective content in each required area
+- ✅ Responsive design
+- ✅ Accessible navigation
 
 ## Running Locally
 
